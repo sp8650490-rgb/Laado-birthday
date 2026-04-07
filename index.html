@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Laado ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen" class="center">
+    <h2>Hey Laado ❤️<br>Only you can unlock this 😏</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Unlock 🔐</button>
+    <p id="error"></p>
+</div>
+
+<!-- ACCESS MESSAGE -->
+<div id="access" class="center hidden">
+    <h1>Access Granted… Welcome Laado ❤️</h1>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main" class="hidden">
+
+    <!-- Landing -->
+    <section class="center">
+        <h1>Hey Laado ❤️<br>Momo has something for you 😏</h1>
+        <button onclick="startJourney()">Start 🎁</button>
+    </section>
+
+    <!-- Story -->
+    <section class="center hidden" id="page1">
+        <h2>5 May 2020… 💫<br>The day you became mine ❤️</h2>
+        <button onclick="nextPage('page2')">Next</button>
+    </section>
+
+    <section class="center hidden" id="page2">
+        <h2>From teasing you at CP 😜<br>to loving you endlessly ❤️</h2>
+        <img src="couple.jpg" class="photo">
+        <button onclick="nextPage('page3')">Next</button>
+    </section>
+
+    <section class="center hidden" id="page3">
+        <h2>You are my peace, my happiness, my home ❤️</h2>
+        <button onclick="nextPage('cards')">Next</button>
+    </section>
+
+    <!-- Cards -->
+    <section id="cards" class="hidden center">
+        <div class="card">My Love ❤️<br>I love you very much, Laado...</div>
+        <div class="card">Your Strength 💪<br>You inspire me every day</div>
+        <div class="card">Your Heart 💖<br>You are so caring</div>
+        <div class="card">Your Future ✨<br>I believe in you always</div>
+        <button onclick="nextPage('memory')">Next</button>
+    </section>
+
+    <!-- Memory -->
+    <section id="memory" class="hidden center">
+        <img src="hands.jpg" class="photo">
+        <p>Never gonna end ❤️<br>5 May 2020</p>
+        <button onclick="nextPage('final')">Next</button>
+    </section>
+
+    <!-- Final -->
+    <section id="final" class="hidden center">
+        <h1>Happy Birthday Laado 🎂❤️</h1>
+        <h3>Forever yours,<br>Momo ❤️</h3>
+        <button onclick="celebrate()">Click 💌</button>
+    </section>
+
+</div>
+
+<audio id="music" src="love.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
